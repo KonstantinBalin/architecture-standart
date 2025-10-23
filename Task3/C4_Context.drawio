@@ -1,0 +1,76 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram id="Task3" name="C4_Context">
+    <mxGraphModel dx="1383" dy="4968" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="6000" pageHeight="4000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3" value="Клиент (новый)" style="shape=umlActor;whiteSpace=wrap;html=1;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="80" y="100" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Клиент (существующий)" style="shape=umlActor;whiteSpace=wrap;html=1;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="80" y="220" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Сайт (PHP + React)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#64b5f6" parent="1" vertex="1">
+          <mxGeometry x="320" y="100" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Интернет‑банк (ASP.NET MVC 4.5 + MS SQL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#64b5f6" parent="1" vertex="1">
+          <mxGeometry x="320" y="220" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Applications (сервис заявок)&#xa;MS SQL/Oracle" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#66bb6a" parent="1" vertex="1">
+          <mxGeometry x="710" y="100" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="Rates (сервис ставок)&#xa;или модуль в АБС" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#66bb6a" parent="1" vertex="1">
+          <mxGeometry x="710" y="220" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="Контакт‑центр (React+Spring+PostgreSQL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#66bb6a" parent="1" vertex="1">
+          <mxGeometry x="1070" y="100" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="АБС (Delphi клиент + Oracle/PL‑SQL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#66bb6a" parent="1" vertex="1">
+          <mxGeometry x="1070" y="220" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="СМС‑шлюз банка" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#66bb6a" parent="1" vertex="1">
+          <mxGeometry x="710" y="-40" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="Партнёрский КЦ (внешний)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6e6;strokeColor=#cc0000" parent="1" vertex="1">
+          <mxGeometry x="1430" y="100" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="Телеком‑оператор (внешний)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6e6;strokeColor=#cc0000" parent="1" vertex="1">
+          <mxGeometry x="1070" y="-40" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="Внутренние — синие/зелёные; внешние — красные" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#9e9e9e" parent="1" vertex="1">
+          <mxGeometry x="60" y="20" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="заявка" parent="1" source="3" target="5" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="операции" parent="1" source="4" target="6" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="POST /deposit-applications" parent="1" source="5" target="7" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="API заявки" parent="1" source="6" target="7" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="GET /rates" parent="1" source="6" target="8" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="events/view" parent="1" source="7" target="9" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="интеграция" parent="1" source="12" target="9" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="статусы/открытие (через БО)" parent="1" source="10" target="7" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="OTP/уведомления" parent="1" source="7" target="11" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="SMS out" parent="1" source="11" target="13" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

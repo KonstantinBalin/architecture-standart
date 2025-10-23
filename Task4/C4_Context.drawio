@@ -1,0 +1,43 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram id="Task4" name="C4 Context — Rates → CC">
+    <mxGraphModel dx="1106" dy="774" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="6000" pageHeight="4000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3" value="Бэк-офис (XLS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#66bb6a" parent="1" vertex="1">
+          <mxGeometry width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Сервис ставок (Rates)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#64b5f6" parent="1" vertex="1">
+          <mxGeometry x="440" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Контакт-центр (внутр.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#66bb6a" parent="1" vertex="1">
+          <mxGeometry x="880" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Rates Exporter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#66bb6a" parent="1" vertex="1">
+          <mxGeometry x="440" y="160" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Почтовый шлюз" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#66bb6a" parent="1" vertex="1">
+          <mxGeometry x="880" y="160" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="Партнёрский КЦ (внеш.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6e6;strokeColor=#cc0000" parent="1" vertex="1">
+          <mxGeometry x="880" y="320" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="XLS загрузка/публикация" parent="1" source="3" target="4" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="API/DB view текущих ставок" parent="1" source="4" target="5" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="событие публикации" parent="1" source="4" target="6" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="CSV/JSON" parent="1" source="6" target="7" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="защищённая почта (PGP/SMIME)" parent="1" source="7" target="8" edge="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
